@@ -1,11 +1,10 @@
-package homeworks.homework_1;
+package homeworks.homework_1.task_2;
 
 public class Rectangle {
 
     int width;
     int height;
 
-    // Задача № 2
     boolean isAreaBiggerThenPerimeter(int width, int height) {
 
         int area = width * height;
