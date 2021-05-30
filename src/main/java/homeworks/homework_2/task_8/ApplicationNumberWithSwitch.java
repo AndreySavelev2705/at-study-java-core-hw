@@ -1,10 +1,10 @@
 package homeworks.homework_2.task_8;
 
-import java.sql.SQLOutput;
-
 public class ApplicationNumberWithSwitch {
-    public static void main(String[] args) {
+    public ApplicationNumberWithSwitch() {
+    }
 
+    public static void main(String[] args) {
         NumberWithSwitch numberWithSwitch = new NumberWithSwitch();
         numberWithSwitch.getCharAWithBreak(-1);
         System.out.println();

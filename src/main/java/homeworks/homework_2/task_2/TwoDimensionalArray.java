@@ -1,60 +1,69 @@
 package homeworks.homework_2.task_2;
 
 public class TwoDimensionalArray {
+    int[][] twoDimensionalArray = new int[8][8];
 
-    int twoDimensionalArray[][] = new int[8][8];
+    public TwoDimensionalArray() {
+    }
 
     void createTwoDimensionalArray() {
-
-        for (int i = 0; i < twoDimensionalArray.length; i++) {
-            for (int j = 0; j < twoDimensionalArray.length; j++) {
+        for(int i = 0; i < this.twoDimensionalArray.length; ++i) {
+            for(int j = 0; j < this.twoDimensionalArray.length; ++j) {
                 if (i % 2 == 0) {
                     if (j % 2 == 0) {
-                        twoDimensionalArray[i][j] = 0;
-                    } else
-                        twoDimensionalArray[i][j] = 1;
+                        this.twoDimensionalArray[i][j] = 0;
+                    } else {
+                        this.twoDimensionalArray[i][j] = 1;
+                    }
+                } else if (j % 2 == 0) {
+                    this.twoDimensionalArray[i][j] = 1;
                 } else {
-                    if (j % 2 == 0) {
-                        twoDimensionalArray[i][j] = 1;
-                    } else
-                        twoDimensionalArray[i][j] = 0;
+                    this.twoDimensionalArray[i][j] = 0;
                 }
             }
         }
+
     }
 
-    void outPutTwoDimensionalArrayByCycleFor(int twoDimensionalArray[][]) {
-
-        for (int i = 0; i < twoDimensionalArray.length; i++) {
+    void outPutTwoDimensionalArrayByCycleFor(int[][] twoDimensionalArray) {
+        for(int i = 0; i < twoDimensionalArray.length; ++i) {
             System.out.println();
-            for (int j = 0; j < twoDimensionalArray.length; j++) {
+
+            for(int j = 0; j < twoDimensionalArray.length; ++j) {
                 System.out.print(twoDimensionalArray[i][j] + " ");
             }
         }
+
     }
 
-    void outPutTwoDimensionalArrayByCycleForeach(int twoDimensionalArray[][]) {
+    void outPutTwoDimensionalArrayByCycleForeach(int[][] twoDimensionalArray) {
+        int[][] var2 = twoDimensionalArray;
+        int var3 = twoDimensionalArray.length;
 
-        for (int array[] : twoDimensionalArray) {
+        for(int var4 = 0; var4 < var3; ++var4) {
+            int[] array = var2[var4];
             System.out.println();
-            for (int element : array) {
+            int[] var6 = array;
+            int var7 = array.length;
+
+            for(int var8 = 0; var8 < var7; ++var8) {
+                int element = var6[var8];
                 System.out.print(element + " ");
             }
         }
+
     }
 
-    void outPutTwoDimensionalArrayByCycleWhile(int twoDimensionalArray[][]) {
-
-        int i = 0;
-        while (i < twoDimensionalArray.length) {
+    void outPutTwoDimensionalArrayByCycleWhile(int[][] twoDimensionalArray) {
+        for(int i = 0; i < twoDimensionalArray.length; ++i) {
             int j = 0;
             System.out.println();
-            while (j < twoDimensionalArray.length) {
-                System.out.print(twoDimensionalArray[i][j] + " ");
-                j++;
-            }
-            i++;
-        }
-    }
 
+            while(j < twoDimensionalArray.length) {
+                System.out.print(twoDimensionalArray[i][j] + " ");
+                ++j;
+            }
+        }
+
+    }
 }
