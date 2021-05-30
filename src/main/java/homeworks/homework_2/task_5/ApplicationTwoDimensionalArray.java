@@ -7,9 +7,20 @@ public class ApplicationTwoDimensionalArray {
 
         twoDimensionalArray.createTwoDimensionalArray();
 
-        for (int i = 0; i < twoDimensionalArray.nArg1; i++) {
-            for (int j = 0; j < twoDimensionalArray.nArg2; j++) {
+        for (int i = 0; i < twoDimensionalArray.width; i++) {
+            for (int j = 0; j < twoDimensionalArray.height; j++) {
                 System.out.print(twoDimensionalArray.twoDimensionalArray[i][j]);
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        int[][] tDArray = twoDimensionalArray.invertOfTwoDimensionalArrayWhenTwoWasFound(twoDimensionalArray.twoDimensionalArray);
+
+        for (int i = 0; i < tDArray.length; i++) {
+            for (int j = 0; j < tDArray[0].length; j++) {
+                System.out.print(tDArray[i][j]);
             }
             System.out.println();
         }
