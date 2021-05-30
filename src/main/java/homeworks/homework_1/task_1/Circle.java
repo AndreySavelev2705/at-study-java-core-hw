@@ -5,9 +5,6 @@ public class Circle {
     double PI = 3.14;
 
     double getAreaOfACircle(int radius) {
-
-        double areaOfACircle = PI * radius * radius;
-
-        return areaOfACircle;
+        return PI * radius * radius;
     }
 }

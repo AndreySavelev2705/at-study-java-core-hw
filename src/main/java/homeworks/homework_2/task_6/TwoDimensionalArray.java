@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class TwoDimensionalArray {
 
-    int width = new Random().nextInt(5)+3; // Ширина
-    int height = new Random().nextInt(5)+3; // Высота
+    int width = new Random().nextInt(5) + 3; // Ширина
+    int height = new Random().nextInt(5) + 3; // Высота
 
     int twoDimensionalArray[][] = new int[width][height];
 
@@ -23,7 +23,7 @@ public class TwoDimensionalArray {
         twoDimensionalArray[x][y] = 2;
     }
 
-    int[][] invertOfTwoDimensionalArrayWhenTwoWasFound (int[][] twoDimensionalArray) {
+    int[][] invertOfTwoDimensionalArrayWhenTwoWasFound(int[][] twoDimensionalArray) {
 
         boolean flagWas2 = false;
         int[][] newArray = new int[width][height];

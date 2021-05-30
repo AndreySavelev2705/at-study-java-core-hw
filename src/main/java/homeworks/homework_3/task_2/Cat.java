@@ -1,7 +1,5 @@
 package homeworks.homework_3.task_2;
 
-import java.util.Random;
-
 public class Cat {
     int age;
     int weight;

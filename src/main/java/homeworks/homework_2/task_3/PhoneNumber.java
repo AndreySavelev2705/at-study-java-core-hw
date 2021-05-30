@@ -4,17 +4,15 @@ public class PhoneNumber {
 
     boolean isEqualsRegex(String phoneNumber) {
 
-        if (phoneNumber.matches("^\\+7\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}$")) {
-            return true;
-        } else return false;
+        return phoneNumber.matches("^\\+7\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}$");
     }
 
-    Boolean isEquals (String phoneNumber) {
+    Boolean isEquals(String phoneNumber) {
         if (phoneNumber == null || phoneNumber.length() != 16)
             return false;
 
         int[] numericIndexes = {3, 4, 5, 7, 8, 9, 11, 12, 14, 15}; // Индексы в строке, которые принимают любые цифровые значения
-        String numbers= "0123456789";
+        String numbers = "0123456789";
 
         // Проверка на +7 и открывающую и закрывающую скобки, а также дефис между номерами
         if (!phoneNumber.startsWith("+7("))
@@ -28,8 +26,9 @@ public class PhoneNumber {
         for (int index : numericIndexes) { // получаем индекс символа в строке phoneNumber
             String symbol = String.valueOf(phoneNumber.charAt(index)); // Преобразование символа из строки phoneNumber в отдельную строку строку
 
-            if (!numbers.contains(symbol)) // Если символа нет в строке numbers, значит оно не число, и ввод был невалиден.
+            if (!numbers.contains(symbol)) { // Если символа нет в строке numbers, значит оно не число, и ввод был невалиден.
                 return false;
+            }
         }
         // Если все проверки пройдены успешно, возвращаем true
         return true;

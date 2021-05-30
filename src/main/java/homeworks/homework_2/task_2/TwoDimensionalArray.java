@@ -6,9 +6,17 @@ public class TwoDimensionalArray {
     public TwoDimensionalArray() {
     }
 
+    int[][] createArray() {
+        return new int[8][8];
+    }
+
+    void fillArray(int[][] array) {
+        //...
+    }
+
     void createTwoDimensionalArray() {
-        for(int i = 0; i < this.twoDimensionalArray.length; ++i) {
-            for(int j = 0; j < this.twoDimensionalArray.length; ++j) {
+        for (int i = 0; i < this.twoDimensionalArray.length; ++i) {
+            for (int j = 0; j < this.twoDimensionalArray.length; ++j) {
                 if (i % 2 == 0) {
                     if (j % 2 == 0) {
                         this.twoDimensionalArray[i][j] = 0;
@@ -26,10 +34,10 @@ public class TwoDimensionalArray {
     }
 
     void outPutTwoDimensionalArrayByCycleFor(int[][] twoDimensionalArray) {
-        for(int i = 0; i < twoDimensionalArray.length; ++i) {
+        for (int i = 0; i < twoDimensionalArray.length; ++i) {
             System.out.println();
 
-            for(int j = 0; j < twoDimensionalArray.length; ++j) {
+            for (int j = 0; j < twoDimensionalArray.length; ++j) {
                 System.out.print(twoDimensionalArray[i][j] + " ");
             }
         }
@@ -40,13 +48,13 @@ public class TwoDimensionalArray {
         int[][] var2 = twoDimensionalArray;
         int var3 = twoDimensionalArray.length;
 
-        for(int var4 = 0; var4 < var3; ++var4) {
+        for (int var4 = 0; var4 < var3; ++var4) {
             int[] array = var2[var4];
             System.out.println();
             int[] var6 = array;
             int var7 = array.length;
 
-            for(int var8 = 0; var8 < var7; ++var8) {
+            for (int var8 = 0; var8 < var7; ++var8) {
                 int element = var6[var8];
                 System.out.print(element + " ");
             }
@@ -55,11 +63,11 @@ public class TwoDimensionalArray {
     }
 
     void outPutTwoDimensionalArrayByCycleWhile(int[][] twoDimensionalArray) {
-        for(int i = 0; i < twoDimensionalArray.length; ++i) {
+        for (int i = 0; i < twoDimensionalArray.length; ++i) {
             int j = 0;
             System.out.println();
 
-            while(j < twoDimensionalArray.length) {
+            while (j < twoDimensionalArray.length) {
                 System.out.print(twoDimensionalArray[i][j] + " ");
                 ++j;
             }

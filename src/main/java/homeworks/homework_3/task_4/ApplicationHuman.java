@@ -1,11 +1,5 @@
 package homeworks.homework_3.task_4;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.Random;
-
 public class ApplicationHuman {
     public static void main(String[] args) {
 
@@ -48,19 +42,16 @@ public class ApplicationHuman {
 
     public static boolean isFriends(Human human1, Human human2) {
 
-        boolean result = false;
-
         String firstName = human1.name;
-
         for (int i = 0; i < human2.friends.length; i++) {
             // Присваивание имени очередного друга
             String secondName = human2.friends[i].name;
 
             // сравнение имени очередного друга с именем первого друга
             if (secondName.equals(firstName)) {
-                return !result;
+                return true;
             }
         }
-        return result;
+        return false;
     }
 }

@@ -1,11 +1,5 @@
 package homeworks.homework_3.task_3;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.Random;
-
 public class ApplicationHuman {
     public static void main(String[] args) {
         // Родители мужа
