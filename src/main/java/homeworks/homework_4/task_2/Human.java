@@ -1,4 +1,4 @@
-package homeworks.homework_4.task_1;
+package homeworks.homework_4.task_2;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -7,7 +7,7 @@ public class Human {
 
     private String firstName;
     private String secondName;
-    private LocalDate birthDay;
+    private LocalDate birthDay = null;
 
     // Типыы полей класса
     private final String FIRST_NAME = "имени";
@@ -55,9 +55,13 @@ public class Human {
     }
 
     public String getBirthDay() {
-        final DateTimeFormatter BIRTHDAY_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        getPrint(BIRTH_DAY, birthDay.format(BIRTHDAY_FORMATTER));
-        return birthDay.format(BIRTHDAY_FORMATTER);
+        if (birthDay != null) {
+            final DateTimeFormatter BIRTHDAY_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            getPrint(BIRTH_DAY, birthDay.format(BIRTHDAY_FORMATTER));
+            return birthDay.format(BIRTHDAY_FORMATTER);
+        }
+        getPrint(BIRTH_DAY, null);
+        return null;
     }
 
     public void getPrint(String typeOfPrint, String print) {
