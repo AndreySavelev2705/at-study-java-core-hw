@@ -1,8 +1,8 @@
 package homeworks.homework_12.task_1.helpers;
 
-import org.apache.poi.ss.formula.functions.T;
+import homeworks.homework_12.task_1.model.Generatable;
 
-public interface SerializeHelper {
+public interface SerializeHelper<T extends Generatable> {
 
     T deserialize(String data, Class<T> clazz);
 

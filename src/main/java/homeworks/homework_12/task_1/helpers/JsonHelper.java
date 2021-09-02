@@ -1,16 +1,18 @@
 package homeworks.homework_12.task_1.helpers;
 
-import org.apache.poi.ss.formula.functions.T;
+import com.google.gson.Gson;
+import homeworks.homework_12.task_1.model.Generatable;
 
-public class JsonHelper implements SerializeHelper{
+public class JsonHelper implements SerializeHelper {
 
     @Override
-    public T deserialize(String data, Class<T> clazz) {
-        return null;
+    public Generatable deserialize(String data, Class clazz) {
+
+        return (Generatable) new Gson().fromJson(data, clazz);
     }
 
     @Override
-    public String serialize(T object) {
-        return null;
+    public String serialize(Generatable object) {
+        return new Gson().toJson(object);
     }
 }
