@@ -1,15 +1,11 @@
 package homeworks.homework_12.task_1.model;
 
-import org.apache.poi.ss.formula.functions.T;
-
 public class Room implements Generatable{
 
     private int width;
     private int height;
 
     public Room() {
-        width = 5;
-        height = 3;
     }
 
     public Room(int width, int height) {
@@ -26,10 +22,10 @@ public class Room implements Generatable{
     }
 
     @Override
-    public T generate() {
-//        width = 5;
-//        height = 3;
-//
-        return null;
+    public Room generate() {
+        width = 5;
+        height = 3;
+
+        return this;
     }
 }

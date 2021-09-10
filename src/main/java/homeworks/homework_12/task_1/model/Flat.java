@@ -1,23 +1,29 @@
 package homeworks.homework_12.task_1.model;
 
-import org.apache.poi.ss.formula.functions.T;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Flat implements Generatable{
 
-    List<Room> rooms;
+    List<Room> rooms = new ArrayList<>();
 
     public Flat() {
-        this.rooms = rooms;
     }
 
     public Flat(List<Room> rooms) {
         this.rooms = rooms;
     }
 
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
     @Override
-    public T generate() {
-        return null;
+    public Flat generate() {
+        for (int i = 0; i < 2; i++) {
+            rooms.add(new Room().generate());
+        }
+
+        return this;
     }
 }
