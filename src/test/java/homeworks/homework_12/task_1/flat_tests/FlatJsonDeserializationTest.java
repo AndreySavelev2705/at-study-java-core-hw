@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 public class FlatJsonDeserializationTest {
 
     @Test
-    @DisplayName("Десериализация квартиры из Оыщт файла")
+    @DisplayName("Десериализация квартиры из Json файла")
     public void deserializationFromJsonFlatTest() {
         String pathToFile = "src/test/java/homeworks/homework_12/task_1/flat_tests/flat.json";
         String data;
